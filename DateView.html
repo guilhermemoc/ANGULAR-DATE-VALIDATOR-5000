@@ -1,0 +1,5 @@
+<label class="item item-input item-floating-label inputs w90">
+  <span class="input-label">Data da ocorrência</span>
+  <input type="tel" placeholder="Data da ocorrência" ng-model="data.dataOcorrenciaView" ng-blur="validaData(data.dataOcorrenciaView)">
+  <span class="error" ng-show="!dataValida">Data invalida</span>
+</label>
