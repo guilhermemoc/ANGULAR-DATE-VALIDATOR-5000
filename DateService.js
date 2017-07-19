@@ -12,7 +12,7 @@ angular.module('starter.services')
       if (moment(data, 'DD-MM-YYYY').isValid() && moment(data, 'DD-MM-YYYY').format('YYYY') > ano)
 
       {
-        //validação de data para nào permitir abertura de sisnistro em datas futuras
+        //validação de data p/ datas futuras
         if (moment(data, 'DD-MM-YYYY') <= today) {
           diaSelecionado = data;
           return true;
@@ -32,7 +32,7 @@ angular.module('starter.services')
       if (!moment(hora, 'hh:mm').isValid() || !moment(hora, 'hh:mm').format('hh:mm')) {
         return false;
       } else {
-        //validação para não permitir abertura de sisnitro em horários futuros
+        //validação para não permitir horários futuros
         if (diaSelecionado == moment(today).format('DDMMYYYY') && hora > horaAtual) {
           return false;
         } else {
